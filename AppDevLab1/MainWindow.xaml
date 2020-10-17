@@ -1,0 +1,74 @@
+﻿<Window x:Class="AppDevLab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDevLab1"
+        mc:Ignorable="d"
+        Title="Лаб.Раб №1 Ст. гр. 10701219 Житникович Е.Н" Height="450" Width="300" MinHeight="450" MinWidth="300"
+        FontSize="14">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Content="Введите значение Х:"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Text="5"
+                 VerticalAlignment="Center"
+                 Margin="2 0 2 0"
+                 x:Name="xInput"/>
+        <Label Grid.Row="1" Grid.Column="0"
+               Content="Введите значение Y:"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="1" Grid.Column="1"
+                 Text="6"
+                 VerticalAlignment="Center"
+                 Margin="2 0 2 0"
+                 x:Name="yInput"/>
+        <Label Grid.Row="2" Grid.Column="0"
+               Content="Введите значение Z:"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="2" Grid.Column="1"
+                 Text="8"
+                 VerticalAlignment="Center"
+                 Margin="2 0 2 0"
+                 x:Name="zInput"/>
+        <Label Grid.Row="3" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Content="Результат выполнения программы:"/>
+
+        <TextBox Grid.Row="4" Grid.Column="0"
+                 Grid.ColumnSpan="2"
+                 Grid.RowSpan="2"
+                 Margin="5"
+                 VerticalScrollBarVisibility="Visible"
+                 IsReadOnly="True"
+                 x:Name="Output"/>
+
+        <Button Grid.Row="6" Grid.Column="0"
+                Grid.ColumnSpan="2"
+                MaxHeight="50"
+                MaxWidth="150"
+                Margin="50, 10, 50, 10"
+                Content="Выполнить"
+                x:Name="executeButton"
+                Click="executeButton_Click"/>
+    </Grid>
+</Window>
