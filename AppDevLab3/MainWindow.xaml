@@ -1,0 +1,79 @@
+﻿<Window x:Class="AppDevLab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDevLab3"
+        mc:Ignorable="d"
+        Title="Лаб.Раб №1 Ст. гр. 10701219 Житникович Е.Н"
+        Height="450" Width="300"
+        FontSize="14"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.35*"/>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.35*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Content="X1 = "
+               VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="0" Grid.Column="1"
+                 Margin="2"
+                 VerticalContentAlignment="Center"
+                 x:Name="textBoxX1"/>
+
+        <Label Grid.Row="1" Grid.Column="0"
+               Content="X2 = "
+               VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="1" Grid.Column="1"
+                 Margin="2"
+                 VerticalContentAlignment="Center"
+                 x:Name="textBoxX2"/>
+
+        <Label Grid.Row="0" Grid.Column="2"
+               Content="N = "
+               VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="0" Grid.Column="3"
+                 Margin="2"
+                 VerticalContentAlignment="Center"
+                 x:Name="textBoxN"/>
+
+        <Label Grid.Row="1" Grid.Column="2"
+               Content="H = "
+               VerticalContentAlignment="Center" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="1" Grid.Column="3"
+                 Margin="2"
+                 VerticalContentAlignment="Center"
+                 IsReadOnly="True"
+                 x:Name="textBoxH"/>
+
+        <Label Grid.Row="2" Grid.Column="0"
+               Grid.ColumnSpan="4"
+               Content="Результат выполнения программы:"
+               VerticalAlignment="Center"/>
+
+        <TextBox Grid.Row="3" Grid.Column="0"
+                 Grid.ColumnSpan="4" Grid.RowSpan="2"
+                 Margin="3"
+                 VerticalScrollBarVisibility="Visible"
+                 x:Name="answerTextBox"/>
+
+        <Button Grid.Row="5" Grid.Column="0"
+                Grid.ColumnSpan="4"
+                Margin="4 6 4 6"
+                Content="Выполнить"
+                x:Name="execute"
+                Click="execute_Click"/>
+    </Grid>
+</Window>
