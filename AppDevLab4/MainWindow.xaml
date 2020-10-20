@@ -1,0 +1,71 @@
+﻿<Window x:Class="AppDevLab4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDevLab4"
+        mc:Ignorable="d"
+        Title="Лаб.Раб №4 Ст. гр. 10701219 Житникович Е.Н"
+        FontSize="16"
+        Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0"
+               Grid.ColumnSpan="2"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"
+               Content="Размерность массива:"/>
+
+        <TextBox Grid.Row="0" Grid.Column="2"
+                 Margin="3"
+                 VerticalContentAlignment="Center"
+                 x:Name="textBoxM"/>
+
+        <Label Grid.Row="0" Grid.Column="3"
+               Content="X"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"/>
+
+        <TextBox Grid.Row="0" Grid.Column="4"
+                 Margin="3"
+                 VerticalContentAlignment="Center"
+                 x:Name="textBoxN"/>
+
+        <Button Grid.Row="0" Grid.Column="5"
+                Margin="3"
+                Content="Изменить размерность массива"
+                x:Name="sizeChangerButton"
+                Click="sizeChangerButton_Click"/>
+
+        <DataGrid Grid.Row="1" Grid.Column="0"
+                  Grid.ColumnSpan="5"
+                  Margin="3"
+                  x:Name="dataGrid"
+                  CanUserAddRows="False"/>
+
+        <Label Grid.Row="1" Grid.Column="5"
+               Margin="3"
+               x:Name="ansLabel"/>
+
+        <Button Grid.Row="2" Grid.Column="0"
+                Grid.ColumnSpan="6"
+                Margin="3"
+                Content="Вычислить"
+                x:Name="execute"
+                Click="execute_Click"/>
+    </Grid>
+</Window>
